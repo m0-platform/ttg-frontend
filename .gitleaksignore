@@ -1,0 +1,6 @@
+# Reviewed false alarms. Each line is file:rule:start-line.
+# A new secret on a different line still fails the scan.
+cypress/e2e/emergencyProposals/proposals-emergency-setKey-guidance.cy.ts:bare-32-byte-hex:5
+cypress/e2e/standardProposals/proposals-standard-castVotesWithReasons.cy.ts:bare-32-byte-hex:6
+cypress/e2e/standardProposals/proposals-standard-setKey-protocol-config.cy.ts:bare-32-byte-hex:6
+cypress/e2e/standardProposals/proposals-standard-castVotesWithReasons.cy.ts:bare-32-byte-hex:3
