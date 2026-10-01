@@ -1,0 +1,35 @@
+# Reviewed false alarms. Each line is file:rule:start-line.
+# A new secret on a different line still fails the scan.
+cypress/e2e/emergencyProposals/proposals-emergency-setKey-guidance.cy.ts:bare-32-byte-hex:5
+cypress/e2e/standardProposals/proposals-standard-castVotesWithReasons.cy.ts:bare-32-byte-hex:6
+cypress/e2e/standardProposals/proposals-standard-setKey-protocol-config.cy.ts:bare-32-byte-hex:6
+cypress/e2e/standardProposals/proposals-standard-castVotesWithReasons.cy.ts:bare-32-byte-hex:3
+.secrets/deploy-token.dev.yaml:bare-32-byte-hex:10
+.secrets/deploy-token.dev.yaml:bare-32-byte-hex:20
+.secrets/deploy-token.mzero-dev-p14y.yaml:bare-32-byte-hex:10
+.secrets/deploy-token.mzero-dev-p14y.yaml:bare-32-byte-hex:20
+.secrets/deploy-token.mzero-production-bu11.yaml:bare-32-byte-hex:10
+.secrets/deploy-token.mzero-production-bu11.yaml:bare-32-byte-hex:20
+.secrets/deploy-token.mzero-staging-t35t.yaml:bare-32-byte-hex:10
+.secrets/deploy-token.mzero-staging-t35t.yaml:bare-32-byte-hex:20
+cypress/e2e/standardProposals/proposals-standard-setKey-protocol-config.cy.ts:bare-32-byte-hex:3
+cypress/lib/deploy-spog.ts:evm-32-byte-hex:85
+cypress/lib/deploy-spog.ts:evm-32-byte-hex:95
+cypress/lib/redeploy.ts:evm-32-byte-hex:98
+cypress/lib/redeploy.ts:evm-32-byte-hex:109
+hardhat/contracts/Multicall3.json:bare-32-byte-hex:470
+hardhat/contracts/Multicall3.json:bare-32-byte-hex:1058
+hardhat/contracts/Multicall3.json:evm-32-byte-hex:470
+hardhat/contracts/Multicall3.json:evm-32-byte-hex:1046
+hardhat/contracts/Multicall3.json:evm-32-byte-hex:4641
+hardhat/contracts/Multicall3.json:evm-32-byte-hex:4670
+hardhat/contracts/Multicall3.json:evm-32-byte-hex:4699
+hardhat/contracts/Multicall3.json:evm-32-byte-hex:4728
+hardhat/contracts/Multicall3.json:evm-32-byte-hex:5888
+hardhat/contracts/Multicall3.json:evm-32-byte-hex:5917
+hardhat/contracts/Multicall3.json:evm-32-byte-hex:5946
+hardhat/contracts/Multicall3.json:evm-32-byte-hex:5975
+lib/api/modules/registrar/protocol-configs/protocol-configs.ts:generic-api-key:105
+pages/proposals/create.vue:evm-32-byte-hex:292
+utils/ipfs.ts:evm-32-byte-hex:2
+utils/ipfs.ts:evm-32-byte-hex:8
