@@ -1,6 +1,7 @@
 import { createPublicClient, Hash, http, fallback } from 'viem'
 import { IApiConfig } from './types'
 import { ApiContext } from './api-context'
+import { withChunkedGetLogs } from './utils'
 import { Registrar } from './modules/registrar'
 import { Governor } from './modules/governor'
 
@@ -29,12 +30,14 @@ export class Api {
     fallbackRpcUrl?: string
     config: IApiConfig
   }) {
-    const client = createPublicClient({
-      cacheTime: 10_000,
-      transport: fallbackRpcUrl
-        ? fallback([http(rpcUrl), http(fallbackRpcUrl)])
-        : http(rpcUrl),
-    })
+    const client = withChunkedGetLogs(
+      createPublicClient({
+        cacheTime: 10_000,
+        transport: fallbackRpcUrl
+          ? fallback([http(rpcUrl), http(fallbackRpcUrl)])
+          : http(rpcUrl),
+      }),
+    )
 
     this.context = new ApiContext(client, config)
 
@@ -44,9 +47,11 @@ export class Api {
   }
 
   setRpc(rpcUrl: string) {
-    this.context.client = createPublicClient({
-      transport: http(rpcUrl),
-    })
+    this.context.client = withChunkedGetLogs(
+      createPublicClient({
+        transport: http(rpcUrl),
+      }),
+    )
   }
 
   addConfig(config: Partial<IApiConfig>): void {
